@@ -1,0 +1,27 @@
+<p> Edit user</p>
+
+<%= form_for :user, url: user_path(@user), method: :patch do |u| %>
+
+
+
+
+
+	<!-- 这里应该给出错误信息 -->
+
+	<p>
+		<%= u.label :Name %>
+		<%= u.text_field :name %>
+	</p>
+
+	<p>
+		<%= u.label :Email %>
+		<%= u.text_field :email %>
+	</p>
+
+	<p>
+		<%= u.submit %>
+	</p>
+<% end %>
+
+<%= link_to 'backup', users_path %>
+

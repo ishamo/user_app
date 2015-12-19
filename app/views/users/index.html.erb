@@ -1,0 +1,18 @@
+<h3> 用户列表 </h3>
+
+<p><%= link_to '新建用户', action: 'new' %></p>
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Email</th>
+	</tr>
+
+	<% @users.each do |user| %>
+		<tr>
+			<td><%= link_to user.name, user %></td>
+			<td><%= user.email %></td>
+			<td><%= link_to '删除用户', user_path(user), method: :delete, data: {confirm: 'Are you sure?'} %></td>
+		</tr>
+	<% end %>
+</table>
