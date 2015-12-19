@@ -6,3 +6,20 @@
 
 <%= @user.name %><br>
 <%= @user.email %>
+
+<h3> 用户微博</h3>
+<% @user.weibos.each do |w| %>
+	<p><%= w.text %></p>
+<% end %>
+
+
+<h3>发布微博</h3>
+<%= form_for([@user, @user.weibos.build]) do |u| %>
+	<p>
+		<%= u.label :weibo %><br>
+		<%= u.text_field :text %>
+	</p>
+	<p>
+		<%= u.submit %>
+	</p>
+<% end %>
