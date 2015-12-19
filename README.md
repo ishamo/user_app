@@ -6,12 +6,12 @@
 
 **TODO**
 
--[] css
--[] header
--[] footer
--[] slide
--[] email
--[] validates
+-[ ]: css
+-[ ] header
+-[ ] footer
+-[ ] slide
+-[ ] email
+-[ ] validates
 
 
 
